@@ -1,0 +1,20 @@
+@startuml Диграмма прецедентов
+left to right direction
+skinparam actorStyle awesome
+
+actor Менеджер as manager
+actor Покупатель as customer
+' Физ. лицо или компания
+
+customer --> (Зарегистрироваться)
+customer --> (Сделать заказ)
+customer --> (Посмотреть историю заказов)
+customer --> (Посмотреть статус заказа)
+customer --> (Отменить заказа)
+
+manager --> (Добавить товары)
+' Можно импортировать список из excel
+manager --> (Обработать заказ)
+manager --> (Отдать готовый заказ)
+
+@enduml
